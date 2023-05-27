@@ -21,6 +21,12 @@ body {
 .parent {
   background-color: #eee;
 }
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* Small Screen */
 @media (min-width: 768px) {
   .container {
@@ -39,6 +45,31 @@ body {
     width: 1170px;
   }
 }
+/* End Global Rules */
+/* Start Components */
+.special-heading {
+  color: #ebeced;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+}
+.special-heading + p {
+  margin: -30px 0 0;
+  font-size: 20px;
+  text-align: center;
+  color: #797979;
+}
+@media (max-width: 767px) {
+  .special-heading {
+    font-size: 60px;
+  }
+  .special-heading + p {
+    margin-top: -20px;
+  }
+}
+/* End Components */
 /* Start Header */
 .header {
   padding: 20px;
@@ -152,8 +183,8 @@ body {
 }
 .landing .intro-text {
   text-align: center;
-  margin-left: 100px;
 }
+
 .landing .intro-text h1 {
   margin: 0;
   color: #10cab7;
@@ -162,7 +193,7 @@ body {
   color: var(--main-color);
 }
 .landing .intro-text p {
-  font-size: 19px;
+  font-size: 32px;
   line-height: 1.8;
   color: rgb(0, 0, 0);
   text-shadow: 1.5px 1px rgb(10, 224, 81);
@@ -180,6 +211,25 @@ body {
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
   padding: 10px;
+}
+/* Small Screen */
+@media (min-width: 300px) and (max-width: 768px) {
+  .landing .intro-text p {
+    font-size: 19px;
+  }
+}
+
+/* Medium */
+@media (min-width: 769px) and (max-width: 992px) {
+  .landing .intro-text p {
+    font-size: 30px;
+  }
+}
+/* Large */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .landing .intro-text p {
+    font-size: 32px;
+  }
 }
 /*End Landing Section  */
 
@@ -211,3 +261,62 @@ body {
   font-size: 17px;
 }
 /* End Features */
+
+/* Start Services */
+.services {
+  padding: 60px 0;
+}
+.service-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 100px;
+}
+.service-content .srv {
+  display: flex;
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .service-content .srv {
+    flex-flow: column;
+    text-align: center;
+  }
+}
+.service-content .srv i {
+  color: var(--main-color);
+  flex-basis: 60px;
+}
+.service-content .srv .text {
+  flex: 1;
+}
+.service-content .srv .text h3 {
+  margin-top: 0 0 20px;
+}
+.service-content .srv .text p {
+  color: #777;
+  font-weight: 300;
+  line-height: 1.6;
+}
+.col .image {
+  text-align: center;
+  position: relative;
+}
+.col .image::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  background-color: var(--secondary-color);
+  width: 100px;
+  height: calc(100% + 80px);
+  top: -40px;
+  z-index: -1;
+}
+.col .image img {
+  width: 260px;
+}
+@media (max-width: 1199px) {
+  .col .image {
+    display: none;
+  }
+}
+/* End Services */
