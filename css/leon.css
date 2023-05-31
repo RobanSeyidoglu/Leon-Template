@@ -525,9 +525,6 @@ body {
 .footer p span {
   font-weight: bold;
   color: var(--main-color);
-}
-.footer:hover span {
-  font-weight: 800;
   text-shadow: 3px 3px black;
 }
 @media (max-width: 767px) {
