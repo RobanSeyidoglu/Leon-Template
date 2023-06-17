@@ -171,7 +171,7 @@ body {
 
 /* Start Landing Section  */
 .landing {
-  background-image: url(/images/thomas-kelley-YQOi2P41BwQ-unsplash.jpg);
+  background-image: url(../images/thomas-kelley-YQOi2P41BwQ-unsplash.jpg);
   background-size: cover;
   height: calc(100vh - 64px);
   display: flex;
